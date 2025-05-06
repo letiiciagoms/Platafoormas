@@ -22,12 +22,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        LoadScene("Splash");
+        //LoadScene("Splash");
+        LoadGameAndGUI();
+        
     }
 
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    
+    public void LoadGameAndGUI()
+    {
+        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
     }
 }
 
